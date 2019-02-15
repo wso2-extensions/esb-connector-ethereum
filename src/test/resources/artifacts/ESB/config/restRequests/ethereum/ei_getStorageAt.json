@@ -1,0 +1,8 @@
+{
+  "apiUrl": "%s(apiUrl)",
+  "port": "%s(port)",
+  "id": "%s(id)",
+  "storageAddress": "%s(storageAddress)",
+  "storagePosition": "%s(storagePosition)",
+  "storageBlock": "%s(storageBlock)"
+}

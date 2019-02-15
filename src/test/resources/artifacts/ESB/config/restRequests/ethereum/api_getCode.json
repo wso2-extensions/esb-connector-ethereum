@@ -1,0 +1,7 @@
+{
+  "method": "eth_getCode",
+  "id": "%s(id)",
+  "params": [
+    "%s(address)", "%s(block)"
+  ]
+}

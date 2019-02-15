@@ -1,0 +1,7 @@
+{
+  "method": "eth_getStorageAt",
+  "id": "%s(id)",
+  "params": [
+    "%s(storageAddress)", "%s(storagePosition)", "%s(storageBlock)"
+  ]
+}
