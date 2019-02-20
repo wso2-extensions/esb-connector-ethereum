@@ -41,22 +41,21 @@
 				<arg expression="$ctx:id" evaluator="xml"/>
 			</args>
 		</payloadFactory>
-		<property name="messageType" value="application/json" scope="axis2"/>
-		<call>
-			<endpoint>
-				<http method="post" uri-template="{uri.var.host}/services"/>
-				<timeout>
-					<duration>{$ctx:timeout}</duration>
-					<responseAction>fault</responseAction>
-				</timeout>
-				<suspendOnFailure>
-					<errorCodes>-1</errorCodes>
-					<progressionFactor>1.0</progressionFactor>
-				</suspendOnFailure>
-				<markForSuspension>
-					<errorCodes>-1</errorCodes>
-				</markForSuspension>
-			</endpoint>
-		</call>
+		<filter source="$ctx:ethereumBlocking" regex="true">
+			<then>
+				<call blocking="true">
+					<endpoint>
+						<http method="post" uri-template="{uri.var.host}/services"/>
+					</endpoint>
+				</call>
+			</then>
+			<else>
+				<call>
+					<endpoint>
+						<http method="post" uri-template="{uri.var.host}/services"/>
+					</endpoint>
+				</call>
+			</else>
+		</filter>
 	</sequence>
 </template>

@@ -35,7 +35,8 @@ Following is a sample request that can be handled by the getStorageAt operation.
 	"id":1,
 	"storageAddress":"0xf91fc7cc1f93970472c71c0720035b5aeb62b7d5",
 	"storagePosition": "0x0",
-	"storageBlock": "latest"
+	"storageBlock": "latest",
+	"ethereumBlocking":"true"
 }
 ```
 **Sample response**

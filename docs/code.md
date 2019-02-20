@@ -32,7 +32,8 @@ Following is a sample request that can be handled by the getCode operation.
 	"port":"8545",
 	"id":1,
 	"address":"0xf91fc7cc1f93970472c71c0720035b5aeb62b7d5",
-	"block": "latest"
+	"block": "latest",
+	"ethereumBlocking":"true"
 }
 ```
 **Sample response**

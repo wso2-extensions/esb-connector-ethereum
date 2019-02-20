@@ -26,7 +26,8 @@ Following is a sample request that can be handled by the getVersion operation.
 {
 	"apiUrl":"http://127.0.0.1",
 	"port":"8545",
-	"id":1
+	"id":1,
+	"ethereumBlocking":"true"
 }
 ```
 **Sample response**
