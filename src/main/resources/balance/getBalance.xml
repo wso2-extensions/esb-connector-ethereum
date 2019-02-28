@@ -24,10 +24,10 @@
 		<property name="id" expression="$func:id"/>
 		<property name="address" expression="$func:address"/>
 		<property name="block" expression="$func:block"/>
-
 		<payloadFactory media-type="json">
 			<format>
-				{ "method": "eth_getBalance",
+				{
+				"method": "eth_getBalance",
 				"params":
 				[
 				"$1",

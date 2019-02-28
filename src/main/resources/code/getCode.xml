@@ -26,7 +26,8 @@
 		<property name="block" expression="$func:block"/>
 		<payloadFactory media-type="json">
 			<format>
-				{ "method": "eth_getCode",
+				{
+				"method": "eth_getCode",
 				"params":
 				[
 				"$1",

@@ -28,7 +28,8 @@
 		<property name="storageBlock" expression="$func:storageBlock"/>
 		<payloadFactory media-type="json">
 			<format>
-				{ "method": "eth_getStorageAt",
+				{
+				"method": "eth_getStorageAt",
 				"params":
 				[
 				"$1",

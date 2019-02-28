@@ -32,11 +32,11 @@
 		</payloadFactory>
 		<filter source="$ctx:ethereumBlocking" regex="true">
 			<then>
-			<call blocking="true">
-				<endpoint>
-					<http method="post" uri-template="{uri.var.host}/services"/>
-				</endpoint>
-			</call>
+				<call blocking="true">
+					<endpoint>
+						<http method="post" uri-template="{uri.var.host}/services"/>
+					</endpoint>
+				</call>
 			</then>
 			<else>
 				<call>

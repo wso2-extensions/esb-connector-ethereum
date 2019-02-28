@@ -38,6 +38,7 @@
         <synapse.version>2.1.7-wso2v19</synapse.version>
         <carbon.mediation.version>4.6.19</carbon.mediation.version>
         <httpcomponents.version>4.3.6</httpcomponents.version>
+        <org.json.version>20080701</org.json.version>
         <json.version>2.0.0.wso2v1</json.version>
         <org.testng.version>6.1.1</org.testng.version>
         <jets3t.version>0.9.4</jets3t.version>
@@ -105,7 +106,6 @@
             <groupId>org.wso2.carbon.automationutils</groupId>
             <artifactId>org.wso2.carbon.integration.common.tests</artifactId>
             <version>${automation.framework.utils.version}</version>
-            <!--<scope>compile</scope>-->
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.mediation</groupId>
@@ -163,7 +163,7 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20080701</version>
+            <version>${org.json.version}</version>
         </dependency>
         <dependency>
             <groupId>org.wso2.ei</groupId>

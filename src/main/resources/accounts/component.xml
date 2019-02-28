@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="accounts" type="synapse/template">
-    <subComponents>
-        <component name="getAccounts">
-            <file>getAccounts.xml</file>
-            <description>Getting list of addresses owned by client</description>
-        </component>
-    </subComponents>
+	<subComponents>
+		<component name="getAccounts">
+			<file>getAccounts.xml</file>
+			<description>Getting list of addresses owned by client</description>
+		</component>
+	</subComponents>
 </component>

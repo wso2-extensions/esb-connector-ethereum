@@ -20,20 +20,11 @@
 	<parameter name="port" description="The port number for the host"/>
 	<parameter name="host" description="The instance URL for Ethereum"/>
 	<parameter name="timeout" description="Timeout duration of the API request"/>
-	<parameter name="ethereumBlocking" description="The blocking parameter is helping connector performs the blocking invocation to ethereum"/>
+	<parameter name="ethereumBlocking"
+			   description="The blocking parameter is helping connector performs the blocking invocation to ethereum"/>
 	<sequence>
 		<property name="apiUrl" expression="$func:apiUrl"/>
 		<property name="port" expression="$func:port"/>
 		<property name="uri.var.host" expression="fn:concat($ctx:apiUrl, ':', $ctx:port)"/>
-		<property name="timeout" expression="$func:timeout"/>
-		<script language="js">
-			<![CDATA[
-                var timeout = mc.getProperty("timeout");
-                if (timeout != null && timeout != "") {
-                    timeout = 60000;
-                }
-                mc.setProperty("timeout", timeout);
-            ]]>
-		</script>
 	</sequence>
 </template>

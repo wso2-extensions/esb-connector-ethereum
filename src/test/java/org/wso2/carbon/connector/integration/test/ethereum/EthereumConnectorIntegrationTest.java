@@ -44,268 +44,309 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
         getApiConfigProperties();
         eiRequestHeadersMap.put("Accept-Charset", "UTF-8");
         eiRequestHeadersMap.put("Content-Type", "application/json");
-
         apiRequestHeadersMap.put("Accept-Charset", "UTF-8");
         apiRequestHeadersMap.put("Content-Type", "application/json");
-
     }
 
     /**
      * Positive test case for getVersion method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getVersion} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getVersion} integration test with mandatory" +
+            " parameters.")
     public void testGetVersionWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getVersion");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getVersion.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getVersion.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getVersion.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getVersion.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getListening method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getListening} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getListening} integration test with " +
+            "mandatory parameters.")
     public void testGetListeningWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getListening");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getListening.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getListening.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getListening.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getListening.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getPeerCount method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getPeerCount} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getPeerCount} integration test with " +
+            "mandatory parameters.")
     public void testGetPeerCountWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getPeerCount");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getPeerCount.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getPeerCount.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getPeerCount.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getPeerCount.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getProtocolVersion method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getProtocolVersion} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getProtocolVersion} integration test with " +
+            "mandatory parameters.")
     public void testGetProtocolVersionWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getProtocolVersion");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getProtocolVersion.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getProtocolVersion.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getProtocolVersion.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getProtocolVersion.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getSyncing method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getSyncing} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getSyncing} integration test with" +
+            " mandatory parameters.")
     public void testGetSyncingWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getSyncing");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getSyncing.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getSyncing.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getSyncing.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getSyncing.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getCoinbase method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getCoinbase} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getCoinbase} integration test with " +
+            "mandatory parameters.")
     public void testGetCoinbaseWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getCoinbase");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getCoinbase.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getCoinbase.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getCoinbase.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getCoinbase.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getMining method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getMining} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getMining} integration test with " +
+            "mandatory parameters.")
     public void testGetMiningWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getMining");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getMining.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getMining.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getMining.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getMining.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getHashRate method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getHashRate} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getHashRate} integration test with " +
+            "mandatory parameters.")
     public void testGetHashRateWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getHashRate");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getHashRate.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getHashRate.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getHashRate.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getHashRate.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getGasPrice method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getGasPrice} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getGasPrice} integration test with " +
+            "mandatory parameters.")
     public void testGetGasPriceWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getGasPrice");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getGasPrice.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getGasPrice.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getGasPrice.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getGasPrice.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getAccounts method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getAccounts} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getAccounts} integration test with " +
+            "mandatory parameters.")
     public void testGetAccountsWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getAccounts");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getAccounts.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getAccounts.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getAccounts.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getAccounts.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getBlockNumber method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getBlockNumber} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getBlockNumber} integration test with" +
+            " mandatory parameters.")
     public void testGetBlockNumberWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getBlockNumber");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getBlockNumber.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getBlockNumber.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getBlockNumber.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getBlockNumber.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getBalance method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getBalance} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getBalance} integration test with" +
+            " mandatory parameters.")
     public void testGetBalanceWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getBalance");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getBalance.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getBalance.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getBalance.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getBalance.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getStorageAt method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getStorageAt} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getStorageAt} integration test with " +
+            "mandatory parameters.")
     public void testGetStorageAtWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getStorageAt");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getStorageAt.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getStorageAt.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getStorageAt.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getStorageAt.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getTransactionCount method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getTransactionCount} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getTransactionCount} integration test with " +
+            "mandatory parameters.")
     public void testGetTransactionCountWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getTransactionCount");
         RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getTransactionCount.json");
+                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                        "ei_getTransactionCount.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getTransactionCount.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getTransactionCount.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
 
     /**
      * Positive test case for getCode method with mandatory parameters.
      */
-    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getCode} integration test with mandatory parameters.")
+    @Test(enabled = true, groups = {"wso2.ei"}, description = "ethereum {getCode} integration test with " +
+            "mandatory parameters.")
     public void testGetCodeWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getCode");
@@ -313,11 +354,11 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
                 sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getCode.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
-                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_getCode.json");
+                sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
+                        "api_getCode.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-        Assert.assertEquals(eiRestResponse.getBody().getString("result"), apiRestResponse.getBody().getString("result"));
-
+        Assert.assertEquals(eiRestResponse.getBody().getString("result"),
+                apiRestResponse.getBody().getString("result"));
     }
-
 }
