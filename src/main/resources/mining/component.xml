@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="mining" type="synapse/template">
-	<subComponents>
-		<component name="getMining">
-			<file>getMining.xml</file>
-			<description>Get true if client is actively mining new blocks</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getMining">
+												<file>getMining.xml</file>
+												<description>Get true if client is actively mining new blocks</description>
+								</component>
+				</subComponents>
 </component>

@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="protocolVersion" type="synapse/template">
-	<subComponents>
-		<component name="getProtocolVersion">
-			<file>getProtocolVersion.xml</file>
-			<description>Getting current ethereum protocol version</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getProtocolVersion">
+												<file>getProtocolVersion.xml</file>
+												<description>Getting current ethereum protocol version</description>
+								</component>
+				</subComponents>
 </component>

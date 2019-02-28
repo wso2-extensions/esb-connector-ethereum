@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="coinbase" type="synapse/template">
-	<subComponents>
-		<component name="getCoinbase">
-			<file>getCoinbase.xml</file>
-			<description>Getting client coinbase address</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getCoinbase">
+												<file>getCoinbase.xml</file>
+												<description>Getting client coinbase address</description>
+								</component>
+				</subComponents>
 </component>

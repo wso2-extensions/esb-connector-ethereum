@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="version" type="synapse/template">
-	<subComponents>
-		<component name="getVersion">
-			<file>getVersion.xml</file>
-			<description>Getting current network Id</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getVersion">
+												<file>getVersion.xml</file>
+												<description>Getting current network Id</description>
+								</component>
+				</subComponents>
 </component>

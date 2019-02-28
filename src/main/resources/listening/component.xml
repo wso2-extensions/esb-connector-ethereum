@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="listening" type="synapse/template">
-	<subComponents>
-		<component name="getListening">
-			<file>getListening.xml</file>
-			<description>Getting true if client is actively listening for network connections</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getListening">
+												<file>getListening.xml</file>
+												<description>Getting true if client is actively listening for network connections</description>
+								</component>
+				</subComponents>
 </component>

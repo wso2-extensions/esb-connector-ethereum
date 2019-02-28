@@ -16,15 +16,15 @@
    under the License.
 -->
 <template name="init" xmlns="http://ws.apache.org/ns/synapse">
-	<parameter name="apiUrl" description="The api URL for Ethereum"/>
-	<parameter name="port" description="The port number for the host"/>
-	<parameter name="host" description="The instance URL for Ethereum"/>
-	<parameter name="timeout" description="Timeout duration of the API request"/>
-	<parameter name="ethereumBlocking"
-			   description="The blocking parameter is helping connector performs the blocking invocation to ethereum"/>
-	<sequence>
-		<property name="apiUrl" expression="$func:apiUrl"/>
-		<property name="port" expression="$func:port"/>
-		<property name="uri.var.host" expression="fn:concat($ctx:apiUrl, ':', $ctx:port)"/>
-	</sequence>
+				<parameter name="apiUrl" description="The api URL for Ethereum"/>
+				<parameter name="port" description="The port number for the host"/>
+				<parameter name="host" description="The instance URL for Ethereum"/>
+				<parameter name="timeout" description="Timeout duration of the API request"/>
+				<parameter name="ethereumBlocking"
+															description="The blocking parameter is helping connector performs the blocking invocation to ethereum"/>
+				<sequence>
+								<property name="apiUrl" expression="$func:apiUrl"/>
+								<property name="port" expression="$func:port"/>
+								<property name="uri.var.host" expression="fn:concat($ctx:apiUrl, ':', $ctx:port)"/>
+				</sequence>
 </template>

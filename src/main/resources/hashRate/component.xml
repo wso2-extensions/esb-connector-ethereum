@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="hashRate" type="synapse/template">
-	<subComponents>
-		<component name="getHashRate">
-			<file>getHashRate.xml</file>
-			<description>Getting number of hashes per second the node is mining with</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getHashRate">
+												<file>getHashRate.xml</file>
+												<description>Getting number of hashes per second the node is mining with</description>
+								</component>
+				</subComponents>
 </component>

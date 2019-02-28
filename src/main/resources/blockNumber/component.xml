@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="blockNumber" type="synapse/template">
-	<subComponents>
-		<component name="getBlockNumber">
-			<file>getBlockNumber.xml</file>
-			<description>Getting number of most recent block</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getBlockNumber">
+												<file>getBlockNumber.xml</file>
+												<description>Getting number of most recent block</description>
+								</component>
+				</subComponents>
 </component>

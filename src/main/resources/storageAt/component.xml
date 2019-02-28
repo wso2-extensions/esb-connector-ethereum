@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="storageAt" type="synapse/template">
-	<subComponents>
-		<component name="getStorageAt">
-			<file>getStorageAt.xml</file>
-			<description>Getting value from a storage position at a given address</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getStorageAt">
+												<file>getStorageAt.xml</file>
+												<description>Getting value from a storage position at a given address</description>
+								</component>
+				</subComponents>
 </component>

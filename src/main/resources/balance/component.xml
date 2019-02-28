@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="balance" type="synapse/template">
-	<subComponents>
-		<component name="getBalance">
-			<file>getBalance.xml</file>
-			<description>Getting balance of the account of given address</description>
-		</component>
-	</subComponents>
+				<subComponents>
+								<component name="getBalance">
+												<file>getBalance.xml</file>
+												<description>Getting balance of the account of given address</description>
+								</component>
+				</subComponents>
 </component>
