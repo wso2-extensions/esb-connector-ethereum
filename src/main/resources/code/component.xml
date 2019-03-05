@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="code" type="synapse/template">
-				<subComponents>
-								<component name="getCode">
-												<file>getCode.xml</file>
-												<description>Getting the code at a given address</description>
-								</component>
-				</subComponents>
+	<subComponents>
+		<component name="getCode">
+			<file>getCode.xml</file>
+			<description>Getting the code at a given address</description>
+		</component>
+	</subComponents>
 </component>

@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="peerCount" type="synapse/template">
-				<subComponents>
-								<component name="getPeerCount">
-												<file>getPeerCount.xml</file>
-												<description>Getting number of peers currently connected to the client</description>
-								</component>
-				</subComponents>
+	<subComponents>
+		<component name="getPeerCount">
+			<file>getPeerCount.xml</file>
+			<description>Getting number of peers currently connected to the client</description>
+		</component>
+	</subComponents>
 </component>

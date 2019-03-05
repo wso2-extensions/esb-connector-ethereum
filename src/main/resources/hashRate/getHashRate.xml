@@ -16,35 +16,35 @@
    under the License.
 -->
 <template name="getHashRate" xmlns="http://ws.apache.org/ns/synapse">
-				<parameter name="id" description="Value of the id established by the client"/>
-				<sequence>
-								<property name="id" expression="$func:id"/>
-								<payloadFactory media-type="json">
-												<format>
-																{
-																"method": "eth_hashrate",
-																"id": "$1"
-																}
-												</format>
-												<args>
-																<arg expression="$.id" evaluator="json"/>
-												</args>
-								</payloadFactory>
-								<filter source="$ctx:ethereumBlocking" regex="true">
-												<then>
-																<call blocking="true">
-																				<endpoint>
-																								<http method="post" uri-template="{uri.var.host}/services"/>
-																				</endpoint>
-																</call>
-												</then>
-												<else>
-																<call>
-																				<endpoint>
-																								<http method="post" uri-template="{uri.var.host}/services"/>
-																				</endpoint>
-																</call>
-												</else>
-								</filter>
-				</sequence>
+	<parameter name="id" description="Value of the id established by the client"/>
+	<sequence>
+		<property name="id" expression="$func:id"/>
+		<payloadFactory media-type="json">
+			<format>
+				{
+				"method": "eth_hashrate",
+				"id": "$1"
+				}
+			</format>
+			<args>
+				<arg expression="$.id" evaluator="json"/>
+			</args>
+		</payloadFactory>
+		<filter source="$ctx:ethereumBlocking" regex="true">
+			<then>
+				<call blocking="true">
+					<endpoint>
+						<http method="post" uri-template="{uri.var.host}/services"/>
+					</endpoint>
+				</call>
+			</then>
+			<else>
+				<call>
+					<endpoint>
+						<http method="post" uri-template="{uri.var.host}/services"/>
+					</endpoint>
+				</call>
+			</else>
+		</filter>
+	</sequence>
 </template>

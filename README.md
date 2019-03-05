@@ -1,6 +1,6 @@
 # Ethereum EI Connector
 
-The Ethereum [Connector](https://docs.wso2.com/display/EI640/Working+with+Connectors) is a decentralized platform that runs smart contracts.
+The Ethereum is a decentralized platform that runs smart contracts. The Ethereum [Connector](https://docs.wso2.com/display/EI640/Working+with+Connectors) allows to access the Ethereum blockchain.
 
 ## Prerequisites
 

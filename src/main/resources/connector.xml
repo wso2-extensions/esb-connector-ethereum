@@ -16,24 +16,24 @@
    under the License.
 -->
 <connector>
-				<component name="ethereum" package="org.wso2.carbon.connector">
-								<dependency component="config"/>
-								<dependency component="version"/>
-								<dependency component="listening"/>
-								<dependency component="peerCount"/>
-								<dependency component="protocolVersion"/>
-								<dependency component="syncing"/>
-								<dependency component="coinbase"/>
-								<dependency component="mining"/>
-								<dependency component="hashRate"/>
-								<dependency component="gasPrice"/>
-								<dependency component="accounts"/>
-								<dependency component="blockNumber"/>
-								<dependency component="balance"/>
-								<dependency component="storageAt"/>
-								<dependency component="transactionCount"/>
-								<dependency component="code"/>
-								<description>WSO2 connector for Ethereum</description>
-				</component>
-				<icon>icon/icon-small.gif</icon>
+	<component name="ethereum" package="org.wso2.carbon.connector">
+		<dependency component="config"/>
+		<dependency component="version"/>
+		<dependency component="listening"/>
+		<dependency component="peerCount"/>
+		<dependency component="protocolVersion"/>
+		<dependency component="syncing"/>
+		<dependency component="coinbase"/>
+		<dependency component="mining"/>
+		<dependency component="hashRate"/>
+		<dependency component="gasPrice"/>
+		<dependency component="accounts"/>
+		<dependency component="blockNumber"/>
+		<dependency component="balance"/>
+		<dependency component="storageAt"/>
+		<dependency component="transactionCount"/>
+		<dependency component="code"/>
+		<description>WSO2 connector for Ethereum</description>
+	</component>
+	<icon>icon/icon-small.gif</icon>
 </connector>

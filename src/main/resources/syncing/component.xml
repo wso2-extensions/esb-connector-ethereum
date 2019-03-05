@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="syncing" type="synapse/template">
-				<subComponents>
-								<component name="getSyncing">
-												<file>getSyncing.xml</file>
-												<description>Getting an object with data about sync status or false</description>
-								</component>
-				</subComponents>
+	<subComponents>
+		<component name="getSyncing">
+			<file>getSyncing.xml</file>
+			<description>Getting an object with data about sync status or false</description>
+		</component>
+	</subComponents>
 </component>

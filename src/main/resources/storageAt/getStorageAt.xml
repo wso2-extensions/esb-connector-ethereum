@@ -16,51 +16,51 @@
    under the License.
 -->
 <template name="getStorageAt" xmlns="http://ws.apache.org/ns/synapse">
-				<parameter name="id" description="Value of the id established by the client"/>
-				<parameter name="params" description="The parameters required"/>
-				<parameter name="storageAddress" description="The address of the storage"/>
-				<parameter name="storagePosition" description="The position in the storage"/>
-				<parameter name="storageBlock" description="Value of the block number"/>
-				<sequence>
-								<property name="id" expression="$func:id"/>
-								<property name="storageAddress" expression="$func:storageAddress"/>
-								<property name="storagePosition" expression="$func:storagePosition"/>
-								<property name="storageBlock" expression="$func:storageBlock"/>
-								<payloadFactory media-type="json">
-												<format>
-																{
-																"method": "eth_getStorageAt",
-																"params":
-																[
-																"$1",
-																"$2",
-																"$3"
-																],
-																"id":"$4"
-																}
-												</format>
-												<args>
-																<arg expression="$ctx:storageAddress" evaluator="xml"/>
-																<arg expression="$ctx:storagePosition" evaluator="xml"/>
-																<arg expression="$ctx:storageBlock" evaluator="xml"/>
-																<arg expression="$ctx:id" evaluator="xml"/>
-												</args>
-								</payloadFactory>
-								<filter source="$ctx:ethereumBlocking" regex="true">
-												<then>
-																<call blocking="true">
-																				<endpoint>
-																								<http method="post" uri-template="{uri.var.host}/services"/>
-																				</endpoint>
-																</call>
-												</then>
-												<else>
-																<call>
-																				<endpoint>
-																								<http method="post" uri-template="{uri.var.host}/services"/>
-																				</endpoint>
-																</call>
-												</else>
-								</filter>
-				</sequence>
+	<parameter name="id" description="Value of the id established by the client"/>
+	<parameter name="params" description="The parameters required"/>
+	<parameter name="storageAddress" description="The address of the storage"/>
+	<parameter name="storagePosition" description="The position in the storage"/>
+	<parameter name="storageBlock" description="Value of the block number"/>
+	<sequence>
+		<property name="id" expression="$func:id"/>
+		<property name="storageAddress" expression="$func:storageAddress"/>
+		<property name="storagePosition" expression="$func:storagePosition"/>
+		<property name="storageBlock" expression="$func:storageBlock"/>
+		<payloadFactory media-type="json">
+			<format>
+				{
+				"method": "eth_getStorageAt",
+				"params":
+				[
+				"$1",
+				"$2",
+				"$3"
+				],
+				"id":"$4"
+				}
+			</format>
+			<args>
+				<arg expression="$ctx:storageAddress" evaluator="xml"/>
+				<arg expression="$ctx:storagePosition" evaluator="xml"/>
+				<arg expression="$ctx:storageBlock" evaluator="xml"/>
+				<arg expression="$ctx:id" evaluator="xml"/>
+			</args>
+		</payloadFactory>
+		<filter source="$ctx:ethereumBlocking" regex="true">
+			<then>
+				<call blocking="true">
+					<endpoint>
+						<http method="post" uri-template="{uri.var.host}/services"/>
+					</endpoint>
+				</call>
+			</then>
+			<else>
+				<call>
+					<endpoint>
+						<http method="post" uri-template="{uri.var.host}/services"/>
+					</endpoint>
+				</call>
+			</else>
+		</filter>
+	</sequence>
 </template>

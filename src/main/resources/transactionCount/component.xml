@@ -16,10 +16,10 @@
    under the License.
 -->
 <component name="transactionCount" type="synapse/template">
-				<subComponents>
-								<component name="getTransactionCount">
-												<file>getTransactionCount.xml</file>
-												<description>Getting number of transactions sent from an account</description>
-								</component>
-				</subComponents>
+	<subComponents>
+		<component name="getTransactionCount">
+			<file>getTransactionCount.xml</file>
+			<description>Getting number of transactions sent from an account</description>
+		</component>
+	</subComponents>
 </component>
