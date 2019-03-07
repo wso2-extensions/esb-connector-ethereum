@@ -16,35 +16,35 @@
    under the License.
 -->
 <template name="getVersion" xmlns="http://ws.apache.org/ns/synapse">
-	<parameter name="id" description="Value of the id established by the client"/>
-	<sequence>
-		<property name="id" expression="$func:id"/>
-		<payloadFactory media-type="json">
-			<format>
-				{
-				"id": "$1",
-				"method": "net_version"
-				}
-			</format>
-			<args>
-				<arg expression="$ctx:id" evaluator="xml"/>
-			</args>
-		</payloadFactory>
-		<filter source="$ctx:ethereumBlocking" regex="true">
-			<then>
-				<call blocking="true">
-					<endpoint>
-						<http method="post" uri-template="{uri.var.host}/services"/>
-					</endpoint>
-				</call>
-			</then>
-			<else>
-				<call>
-					<endpoint>
-						<http method="post" uri-template="{uri.var.host}/services"/>
-					</endpoint>
-				</call>
-			</else>
-		</filter>
-	</sequence>
+    <parameter name="id" description="Value of the id established by the client"/>
+    <sequence>
+        <property name="id" expression="$func:id"/>
+        <payloadFactory media-type="json">
+            <format>
+                {
+                "id": "$1",
+                "method": "net_version"
+                }
+            </format>
+            <args>
+                <arg expression="$ctx:id" evaluator="xml"/>
+            </args>
+        </payloadFactory>
+        <filter source="$ctx:ethereumBlocking" regex="true">
+            <then>
+                <call blocking="true">
+                    <endpoint>
+                        <http method="post" uri-template="{uri.var.host}/services"/>
+                    </endpoint>
+                </call>
+            </then>
+            <else>
+                <call>
+                    <endpoint>
+                        <http method="post" uri-template="{uri.var.host}/services"/>
+                    </endpoint>
+                </call>
+            </else>
+        </filter>
+    </sequence>
 </template>
