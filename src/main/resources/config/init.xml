@@ -23,8 +23,8 @@
     <parameter name="ethereumBlocking"
                description="The blocking parameter is helping connector performs the blocking invocation to ethereum"/>
     <sequence>
-    <property name="apiUrl" expression="$func:apiUrl"/>
-    <property name="port" expression="$func:port"/>
-    <property name="uri.var.host" expression="fn:concat($ctx:apiUrl, ':', $ctx:port)"/>
+        <property name="apiUrl" expression="$func:apiUrl"/>
+        <property name="port" expression="$func:port"/>
+        <property name="uri.var.host" expression="fn:concat($ctx:apiUrl, ':', $ctx:port)"/>
     </sequence>
 </template>

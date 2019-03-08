@@ -59,7 +59,7 @@
                     <endpoint>
                         <http method="post" uri-template="{uri.var.host}/services"/>
                     </endpoint>
-			    </call>
+                </call>
             </else>
         </filter>
     </sequence>
