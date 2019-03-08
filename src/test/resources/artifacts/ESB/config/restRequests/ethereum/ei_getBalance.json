@@ -1,0 +1,7 @@
+{
+  "apiUrl": "%s(apiUrl)",
+  "port": "%s(port)",
+  "id": "%s(id)",
+  "address": "%s(address)",
+  "block": "%s(block)"
+}

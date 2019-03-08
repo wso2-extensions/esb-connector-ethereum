@@ -1,0 +1,4 @@
+{
+  "method": "net_peerCount",
+  "id": "%s(id)"
+}

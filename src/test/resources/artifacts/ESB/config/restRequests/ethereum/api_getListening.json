@@ -1,0 +1,4 @@
+{
+  "method": "net_listening",
+  "id": "%s(id)"
+}
