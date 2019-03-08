@@ -17,110 +17,110 @@
  ~  under the License.
 -->
 <proxy xmlns="http://ws.apache.org/ns/synapse" name="ethereum"
-	   transports="https,http" statistics="disable" trace="disable"
-	   startOnLoad="true">
-	<target>
-		<inSequence>
-			<property name="apiUrl" expression="json-eval($.apiUrl)"/>
-			<property name="port" expression="json-eval($.port)"/>
-			<property name="id" expression="json-eval($.id)"/>
-			<property name="address" expression="json-eval($.address)"/>
-			<property name="storageBlock" expression="json-eval($.storageBlock)"/>
-			<property name="block" expression="json-eval($.block)"/>
-			<property name="storagePosition" expression="json-eval($.storagePosition)"/>
-			<property name="storageAddress" expression="json-eval($.storageAddress)"/>
-			<ethereum.init>
-				<apiUrl>{$ctx:apiUrl}</apiUrl>
-				<port>{$ctx:port}</port>
-			</ethereum.init>
-			<switch source="get-property('transport', 'Action')">
-				<case regex="urn:getVersion">
-					<ethereum.getVersion>
-						<id>{$ctx:id}</id>
-					</ethereum.getVersion>
-				</case>
-				<case regex="urn:getPeerCount">
-					<ethereum.getPeerCount>
-						<id>{$ctx:id}</id>
-					</ethereum.getPeerCount>
-				</case>
-				<case regex="urn:getListening">
-					<ethereum.getListening>
-						<id>{$ctx:id}</id>
-					</ethereum.getListening>
-				</case>
-				<case regex="urn:getProtocolVersion">
-					<ethereum.getProtocolVersion>
-						<id>{$ctx:id}</id>
-					</ethereum.getProtocolVersion>
-				</case>
-				<case regex="urn:getSyncing">
-					<ethereum.getSyncing>
-						<id>{$ctx:id}</id>
-					</ethereum.getSyncing>
-				</case>
-				<case regex="urn:getCoinbase">
-					<ethereum.getCoinbase>
-						<id>{$ctx:id}</id>
-					</ethereum.getCoinbase>
-				</case>
-				<case regex="urn:getMining">
-					<ethereum.getMining>
-						<id>{$ctx:id}</id>
-					</ethereum.getMining>
-				</case>
-				<case regex="urn:getHashRate">
-					<ethereum.getHashRate>
-						<id>{$ctx:id}</id>
-					</ethereum.getHashRate>
-				</case>
-				<case regex="urn:getGasPrice">
-					<ethereum.getGasPrice>
-						<id>{$ctx:id}</id>
-					</ethereum.getGasPrice>
-				</case>
-				<case regex="urn:getAccounts">
-					<ethereum.getAccounts>
-						<id>{$ctx:id}</id>
-					</ethereum.getAccounts>
-				</case>
-				<case regex="urn:getBlockNumber">
-					<ethereum.getBlockNumber>
-						<id>{$ctx:id}</id>
-					</ethereum.getBlockNumber>
-				</case>
-				<case regex="urn:getBalance">
-					<ethereum.getBalance>
-						<id>{$ctx:id}</id>
-						<address>{$ctx:address}</address>
-						<block>{$ctx:block}</block>
-					</ethereum.getBalance>
-				</case>
-				<case regex="urn:getStorageAt">
-					<ethereum.getStorageAt>
-						<id>{$ctx:id}</id>
-						<storageAddress>{$ctx:storageAddress}</storageAddress>
-						<storagePosition>{$ctx:storagePosition}</storagePosition>
-						<storageBlock>{$ctx:storageBlock}</storageBlock>
-					</ethereum.getStorageAt>
-				</case>
-				<case regex="urn:getTransactionCount">
-					<ethereum.getTransactionCount>
-						<id>{$ctx:id}</id>
-						<address>{$ctx:address}</address>
-						<block>{$ctx:block}</block>
-					</ethereum.getTransactionCount>
-				</case>
-				<case regex="urn:getCode">
-					<ethereum.getCode>
-						<id>{$ctx:id}</id>
-						<address>{$ctx:address}</address>
-						<block>{$ctx:block}</block>
-					</ethereum.getCode>
-				</case>
-			</switch>
-			<respond/>
-		</inSequence>
-	</target>
-	<description/>
+       transports="https,http" statistics="disable" trace="disable"
+       startOnLoad="true">
+        <target>
+        <inSequence>
+            <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+            <property name="port" expression="json-eval($.port)"/>
+            <property name="id" expression="json-eval($.id)"/>
+            <property name="address" expression="json-eval($.address)"/>
+            <property name="storageBlock" expression="json-eval($.storageBlock)"/>
+            <property name="block" expression="json-eval($.block)"/>
+            <property name="storagePosition" expression="json-eval($.storagePosition)"/>
+            <property name="storageAddress" expression="json-eval($.storageAddress)"/>
+            <ethereum.init>
+                <apiUrl>{$ctx:apiUrl}</apiUrl>
+                <port>{$ctx:port}</port>
+            </ethereum.init>
+            <switch source="get-property('transport', 'Action')">
+                <case regex="urn:getVersion">
+                    <ethereum.getVersion>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getVersion>
+                </case>
+                <case regex="urn:getPeerCount">
+                    <ethereum.getPeerCount>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getPeerCount>
+                </case>
+                <case regex="urn:getListening">
+                    <ethereum.getListening>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getListening>
+                </case>
+                <case regex="urn:getProtocolVersion">
+                    <ethereum.getProtocolVersion>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getProtocolVersion>
+                </case>
+                <case regex="urn:getSyncing">
+                    <ethereum.getSyncing>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getSyncing>
+                </case>
+                <case regex="urn:getCoinbase">
+                    <ethereum.getCoinbase>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getCoinbase>
+                </case>
+                <case regex="urn:getMining">
+                    <ethereum.getMining>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getMining>
+                </case>
+                <case regex="urn:getHashRate">
+                    <ethereum.getHashRate>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getHashRate>
+                </case>
+                <case regex="urn:getGasPrice">
+                    <ethereum.getGasPrice>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getGasPrice>
+                </case>
+                <case regex="urn:getAccounts">
+                    <ethereum.getAccounts>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getAccounts>
+                </case>
+                <case regex="urn:getBlockNumber">
+                    <ethereum.getBlockNumber>
+                        <id>{$ctx:id}</id>
+                    </ethereum.getBlockNumber>
+                </case>
+                <case regex="urn:getBalance">
+                    <ethereum.getBalance>
+                        <id>{$ctx:id}</id>
+                        <address>{$ctx:address}</address>
+                        <block>{$ctx:block}</block>
+                    </ethereum.getBalance>
+                </case>
+                <case regex="urn:getStorageAt">
+                    <ethereum.getStorageAt>
+                        <id>{$ctx:id}</id>
+                        <storageAddress>{$ctx:storageAddress}</storageAddress>
+                        <storagePosition>{$ctx:storagePosition}</storagePosition>
+                        <storageBlock>{$ctx:storageBlock}</storageBlock>
+                    </ethereum.getStorageAt>
+                </case>
+                <case regex="urn:getTransactionCount">
+                    <ethereum.getTransactionCount>
+                        <id>{$ctx:id}</id>
+                        <address>{$ctx:address}</address>
+                        <block>{$ctx:block}</block>
+                    </ethereum.getTransactionCount>
+                </case>
+                <case regex="urn:getCode">
+                    <ethereum.getCode>
+                        <id>{$ctx:id}</id>
+                        <address>{$ctx:address}</address>
+                        <block>{$ctx:block}</block>
+                    </ethereum.getCode>
+                </case>
+            </switch>
+            <respond/>
+        </inSequence>
+    </target>
+    <description/>
 </proxy>
