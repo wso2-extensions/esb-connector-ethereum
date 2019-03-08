@@ -56,17 +56,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetVersionWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getVersion");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getVersion.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getVersion.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getVersion.json");
+                                    "api_getVersion.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -77,17 +76,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetListeningWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getListening");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getListening.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getListening.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getListening.json");
+                                    "api_getListening.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -98,17 +96,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetPeerCountWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getPeerCount");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getPeerCount.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getPeerCount.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getPeerCount.json");
+                                    "api_getPeerCount.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -119,17 +116,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetProtocolVersionWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getProtocolVersion");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getProtocolVersion.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getProtocolVersion.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getProtocolVersion.json");
+                                    "api_getProtocolVersion.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -140,17 +136,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetSyncingWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getSyncing");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getSyncing.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getSyncing.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getSyncing.json");
+                                    "api_getSyncing.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -161,17 +156,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetCoinbaseWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getCoinbase");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getCoinbase.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getCoinbase.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getCoinbase.json");
+                                    "api_getCoinbase.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -182,17 +176,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetMiningWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getMining");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getMining.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getMining.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getMining.json");
+                                    "api_getMining.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -203,17 +196,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetHashRateWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getHashRate");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getHashRate.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getHashRate.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getHashRate.json");
+                                    "api_getHashRate.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -224,17 +216,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetGasPriceWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getGasPrice");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getGasPrice.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getGasPrice.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getGasPrice.json");
+                                    "api_getGasPrice.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -245,17 +236,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetAccountsWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getAccounts");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getAccounts.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getAccounts.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getAccounts.json");
+                                    "api_getAccounts.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -266,17 +256,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetBlockNumberWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getBlockNumber");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getBlockNumber.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getBlockNumber.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getBlockNumber.json");
+                                    "api_getBlockNumber.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -287,17 +276,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetBalanceWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getBalance");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getBalance.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getBalance.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getBalance.json");
+                                    "api_getBalance.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -308,17 +296,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetStorageAtWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getStorageAt");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getStorageAt.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getStorageAt.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getStorageAt.json");
+                                    "api_getStorageAt.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -329,17 +316,16 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetTransactionCountWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getTransactionCount");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
-                        "ei_getTransactionCount.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getTransactionCount.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getTransactionCount.json");
+                                    "api_getTransactionCount.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 
     /**
@@ -350,15 +336,15 @@ public class EthereumConnectorIntegrationTest extends ConnectorIntegrationTestBa
     public void testGetCodeWithMandatoryParameters() throws Exception {
 
         eiRequestHeadersMap.put("Action", "urn:getCode");
-        RestResponse<JSONObject> eiRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap, "ei_getCode.json");
+        RestResponse<JSONObject> eiRestResponse = sendJsonRestRequest(proxyUrl, "POST", eiRequestHeadersMap,
+                                                                      "ei_getCode.json");
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + ":" + connectorProperties.getProperty("port");
         RestResponse<JSONObject> apiRestResponse =
                 sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap,
-                        "api_getCode.json");
+                                    "api_getCode.json");
         Assert.assertEquals(eiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(eiRestResponse.getBody().getString("result"),
-                apiRestResponse.getBody().getString("result"));
+                            apiRestResponse.getBody().getString("result"));
     }
 }
