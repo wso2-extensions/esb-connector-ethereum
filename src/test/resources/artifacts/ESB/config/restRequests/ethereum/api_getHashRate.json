@@ -1,0 +1,4 @@
+{
+  "method": "eth_hashrate",
+  "id": "%s(id)"
+}

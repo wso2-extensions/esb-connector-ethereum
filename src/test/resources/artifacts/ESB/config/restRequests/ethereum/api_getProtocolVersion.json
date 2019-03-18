@@ -1,0 +1,4 @@
+{
+  "method": "eth_protocolVersion",
+  "id": "%s(id)"
+}
